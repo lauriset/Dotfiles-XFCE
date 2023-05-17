@@ -1,0 +1,27 @@
+csv_cmd             = apps
+tint2_look          = 0
+menu_valign			= bottom
+menu_halign			= left
+menu_margin_x       = 20
+menu_margin_y       = 575
+menu_width          = 450
+menu_height_min     = 440
+menu_height_max     = 510
+menu_padding_top    = 40
+menu_padding_right  = 2
+menu_padding_bottom = 1
+menu_padding_left   = 151
+menu_border         = 1
+menu_radius        = 6
+item_height         = 35
+item_radius         = 5
+item_border         = 1
+color_menu_bg       = #102032 100
+color_menu_border   = #081019 20
+#color_norm_fg       = #eeeeee 100
+color_sel_bg        = #0F2D36 100
+#color_sel_fg        = #eeeeee 100
+color_sel_border    = #eeeeee 0
+color_scroll_ind    = #000000 0
+csv_name_format     = %n\n<span size="x-small">%g</span>
+csv_no_dirs         = 1

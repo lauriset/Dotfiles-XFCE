@@ -1,0 +1,28 @@
+@icon,,18,17,16,16,0,left,top,#7AA2F7,#7AA2F7,/home/lauri/.config/jgmenu/MenuIcons/search.png
+@search,,42,15,150,20,2,left,top,#c0caf5,#7aa2f7,search ...
+@icon,,10,89,216,116,0,left,top,#7AA2F7,#7AA2F7,/home/lauri/.config/jgmenu/MenuIcons/void.png
+@icon,,164,289,16,16,0,left,top,#7AA2F7,#7AA2F7,/home/lauri/.config/jgmenu/MenuIcons/exit.png
+@icon,,160,326,19,19,0,left,top,#7AA2F7,#7AA2F7,/home/lauri/.config/jgmenu/MenuIcons/restart.png
+@icon,,340,390,60,60,0,left,top,#7AA2F7,#7AA2F7,/home/lauri/.config/jgmenu/MenuIcons/menu.png
+
+Terminal,urxvt,/home/lauri/.config/jgmenu/MenuIcons/terminal.png
+
+Web Browser,qutebrowser,/home/lauri/.config/jgmenu/MenuIcons/web-browser.png
+
+File manager,thunar,/home/lauri/.config/jgmenu/MenuIcons/file-manager.png
+
+Text Editor,alacritty -e nvim,/home/lauri/.config/jgmenu/MenuIcons/edit-note.png
+
+Ncmpcpp,urxvt -e ncmpcpp,/home/lauri/.config/jgmenu/MenuIcons/music.png
+
+^sep()
+Applications,^checkout(lx-apps),/home/lauri/.config/jgmenu/MenuIcons/applications.png
+
+Lock Screen,xfce4-session-logout
+Exit,^checkout(exit),system-shutdown
+
+^tag(exit)
+Logout,xfce --exit,xfce4-session-logout,/home/lauri/.config/jgmenu/MenuIcons/exit.png
+Reboot,/bin/xfce4-session-logout,/home/lauri/.config/jgmenu/MenuIcons/restart.png
+Shut Down,/bin/xfce4-session-logout,/home/lauri/.config/jgmenu/MenuIcons/ShutDown.png
+^tag(lx-apps)
