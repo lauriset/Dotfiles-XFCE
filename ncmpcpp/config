@@ -1,0 +1,26 @@
+#
+# ~/.ncmpcpp/config
+#
+##### connection settings #####
+mpd_host = "localhost"
+mpd_port = "6600"
+mpd_music_dir = "/home/lauri/Música/"
+
+#alternative_header_first_line_format = "$0$aqqu$/a$9 {%t}|{%f} $0$atqq$/a$9$/b"
+# song format
+song_list_format = "{$7%a - $9}{$5%t$9}|{$0%f$9}$R{$3▕ %l$9}"
+song_status_format ="{$0%a - $9}{$8%t$9}|{$0%f$9}"
+# various settings
+autocenter_mode = "yes"
+header_visibility = "no"
+progressbar_look = "=>·"
+statusbar_visibility = "yes"
+jump_to_now_playing_song_at_start = "yes"
+# color definitions
+# main_window_highlight_color = "white"
+# header_window_color = "grey"
+visualizer_in_stereo = "yes"
+visualizer_output_name = "mpd_visualizer"
+visualizer_type = "ellipse" (spectrum/ellipse/wave)
+visualizer_look = "●●"
+execute_on_song_change = "~/.ncmpcpp/scripts/notify"
