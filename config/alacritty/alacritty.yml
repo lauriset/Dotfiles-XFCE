@@ -1,0 +1,103 @@
+window:
+  dimensions:
+    columns: 83
+    lines: 22
+
+  padding:
+    x: 20
+    y: 20
+  opacity: 1
+
+colors:
+  primary:
+    background: "#0A101C" # base
+    foreground: "#DEE6E7" # text
+    # Bright and dim foreground colors
+    dim_foreground: "#DEE6E7" # text
+    bright_foreground: "#DEE6E7" # text
+
+  # Cursor colors
+  cursor:
+    text: "#0A101C" # base
+    cursor: "#F5E0DC" # rosewater
+  vi_mode_cursor:
+    text: "#0A101C" # base
+    cursor: "#B4BEFE" # lavender
+
+  # Search colors
+  search:
+    matches:
+      foreground: "#0A101C" # base
+      background: "#A6ADC8" # subtext0
+    focused_match:
+      foreground: "#0A101C" # base
+      background: "#A6E3A1" # green
+    footer_bar:
+      foreground: "#0A101C" # base
+      background: "#A6ADC8" # subtext0
+
+  # Keyboard regex hints
+  hints:
+    start:
+      foreground: "#0A101C" # base
+      background: "#F9E2AF" # yellow
+    end:
+      foreground: "#0A101C" # base
+      background: "#A6ADC8" # subtext0
+
+  # Selection colors
+  selection:
+    text: "#0A101C" # base
+    background: "#F5E0DC" # rosewater
+
+  # Normal colors
+  normal:
+    black: "#45475A" # surface1
+    red: "#F38BA8" # red
+    green: "#A6E3A1" # green
+    yellow: "#F9E2AF" # yellow
+    blue: "#89B4FA" # blue
+    magenta: "#F5C2E7" # pink
+    cyan: "#94E2D5" # teal
+    white: "#BAC2DE" # subtext1
+
+  # Bright colors
+  bright:
+    black: "#585B70" # surface2
+    red: "#F38BA8" # red
+    green: "#A6E3A1" # green
+    yellow: "#F9E2AF" # yellow
+    blue: "#89B4FA" # blue
+    magenta: "#F5C2E7" # pink
+    cyan: "#94E2D5" # teal
+    white: "#A6ADC8" # subtext0
+
+  # Dim colors
+  dim:
+    black: "#45475A" # surface1
+    red: "#F38BA8" # red
+    green: "#A6E3A1" # green
+    yellow: "#F9E2AF" # yellow
+    blue: "#89B4FA" # blue
+    magenta: "#F5C2E7" # pink
+    cyan: "#94E2D5" # teal
+    white: "#BAC2DE" # subtext1
+
+  indexed_colors:
+    - { index: 16, color: "#FAB387" }
+    - { index: 17, color: "#F5E0DC" }
+
+font:
+  normal:
+    family: "JetBrainsMono Nerd Font"
+    style: Regular
+  bold:
+    family: "JetBrainsMono Nerd Font"
+    style: Bold
+  italic:
+    family: "JetBrainsMono Nerd Font"
+    style: Italic
+  bold_italic:
+    family: "JetBrainsMono Nerd Font"
+    style: Bold Italic
+  size: 9.0
