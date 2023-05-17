@@ -1,0 +1,117 @@
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+
+! Command to check DPI-- xdpyinfo | grep -B2 resolution --
+Xft.autohint: true
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+!Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+!-------------------------------------------------------------------------------
+! Rofi settings
+! by Lauriset
+!-------------------------------------------------------------------------------
+
+rofi.show-icons:            false
+rofi.modi:                        drun,run,window,ssh
+rofi.lines:                         7
+rofi.line-padding:         0
+rofi.matching:                fuzzy
+rofi.bw:                             0
+rofi.history:                     true
+rofi.padding:                  0
+rofi.separator-style:    none
+rofi.hide-scrollbar:       true
+rofi.line-margin:            0
+rofi.font:                           Iosevka  10
+rofi.theme:                       /home/lauri/.config/rofi/themes/spark/rofi/launcher.rasi
+!-------------------------------------------------------------------------------
+! URxvt settings
+! by Laurise
+!-------------------------------------------------------------------------------
+
+! settings
+URxvt*title: 			       urxvt
+URxvt*termName: 		       rxvt-256color
+URxvt*iconName:		       rxvt-256color
+URxvt*scrollBar:                    false
+URxvt*scrollTtyOutput:       false
+URxvt*scrollTtyKeypress:  true
+URxvt*secondaryScroll:      true
+URxvt*saveLines:                   8000
+URxvt*geometry:                   95x17
+URxvt.internalBorder:          30 
+! URxvt.borderColor:      #171624
+!URxvt*cursorColor:       #999999
+!URxvt*colorBD:              #FFFFFF
+URxvt*colorUL:                      #9DBA3A
+URxvt*mapAlert:                   true
+URxvt*urgentOnBell:            true
+URxvt.print-pipe:        cat > $(TMPDIR=$HOME mktemp urxvt.XXXXXX)
+
+! Fonts
+URxvt.allow_bold:           false
+
+URxvt*font:  xft:mplus Nerd Font Mono:size=10
+URxvt*boldFont:  xft:mplus Nerd Font Mono:size=10
+
+! Fix font space
+URxvt*letterSpace: -1
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:             false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:           1
+URxvt.urlLauncher:                   firefox
+
+! Cursor
+URxvt.cursorBlink:               false
+URxvt.cursorUnderline:      true
+
+! Pointer
+URxvt.pointerBlank:             false
+
+! Colors
+*background: #102032
+*foreground: #FFFFFF
+*cursorColor: #FFFFFF
+
+!! white dark/light
+*color0: #DF6467
+*color8: #87D1DA
+
+!! red dark/light
+*color1: #5AF7B0
+*color9:  #87D1DA
+
+!! green dark/light
+*color2: #0F1C2E
+*color10: #A1B4B7
+
+!! yellow dark/light
+*color3: #00B5B5
+*color11: #174B4B
+
+!! blue dark/light
+*color4: #1F5E5E
+*color12: #1F5E5E
+
+!! magenta dark/light
+*color5: #1F7582
+*color13: #349BAA
+
+!! cyan dark/light
+*color6: #FFFFFF
+*color14: 27A2A2
+
+!! black dark/light
+*color7: #FFFFFF
+*color15: #8AAEF6
+
