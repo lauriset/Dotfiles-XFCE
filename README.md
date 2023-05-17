@@ -9,4 +9,6 @@ In the scripts prepend.csv, change the path that corresponds
 ### Ncmpcpp:
 In the notify scripts, change MUSIC_DIR=$HOME/XXXXX/
 
+I generally use key combinations, in this case windows are closed in Xfce with Ctrl + Q
+
 Excuse my English Enjoy!
