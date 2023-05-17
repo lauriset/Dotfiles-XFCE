@@ -1,0 +1,134 @@
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/volume]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = false
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-volume = <ramp-volume> <label-volume>
+format-volume-background = ${color.mb}
+
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-muted = <label-muted>
+
+; Available tokens:
+;   %percentage% (default)
+label-volume = %percentage%%
+
+; Available tokens:
+;   %percentage% (default
+format-muted-prefix = 婢
+format-muted-prefix-foreground = ${color.FOREGROUND}
+format-muted-font = 2
+label-muted = " Mute"
+;label-muted-foreground = ${color.RED}
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 奔
+ramp-volume-3 = 墳
+ramp-volume-4 = 墳
+ramp-volume-foreground = ${color.red}
+ramp-volume-font = 2
+
+; If defined, it will replace <ramp-volume> when
+; headphones are plugged in to `headphone_control_numid`
+; If undefined, <ramp-volume> will be used for both
+; Only applies if <ramp-volume> is used
+;;ramp-headphones-0 = 
+;;ramp-headphones-1 = 
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/mpd]
+type = internal/mpd
+
+interval = 2
+
+format-online = <icon-prev> <toggle> <icon-next>
+
+format-online-background = ${color.mb}
+format-offline-foreground = ${color.grey}
+
+format-playing = ${self.format-online}
+format-paused = ${self.format-online}
+format-stopped = ${self.format-online}
+
+format-offline = <label-offline>
+format-offline-prefix = " "
+format-offline-background = ${color.mb}
+
+label-song =  "%artist% - %title%"
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+label-offline = "Offline"
+
+icon-play = 
+icon-play-font = 2
+icon-play-foreground = ${color.lime}
+icon-pause = 
+icon-pause-font = 2
+icon-pause-foreground = ${color.lime}
+icon-stop = 
+icon-stop-foreground = ${color.lime}
+icon-prev = 玲
+icon-prev-font = 1
+icon-prev-foreground = ${color.fg}
+icon-next = 怜
+icon-next-font = 1
+icon-next-foreground = ${color.fg}
+
+;;-----------
+
+[module/song]
+type = internal/mpd
+
+interval = 2
+
+format-online = <icon-repeat> <label-song>
+format-online-foreground = ${color.grey}
+
+format-playing = ${self.format-online}
+format-paused = ${self.format-online}
+format-stopped = ${self.format-online}
+
+label-song =  " %title%"
+label-song-foreground = ${color.blue}
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+icon-repeat = ""
+icon-repeat-foreground = #FF0677
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/info-cava]
+type = custom/script
+exec =  ~/.config/polybar/modules/cava
+
+format = <label>
+label = %output%
+format-foreground = #9d00ff
+format-background = ${color.mb}
+tail = true
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+

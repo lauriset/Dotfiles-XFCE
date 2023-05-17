@@ -1,0 +1,249 @@
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/bna]
+type = custom/text
+
+content = " NON"
+content-foreground = ${color.blue-arch}
+content-background = ${color.mb}
+
+content-prefix = 
+content-prefix-font = 7
+content-prefix-foreground = ${color.MAGENTA}
+content-padding = 0
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/backlight]
+type = internal/xbacklight
+
+card = intel_backlight
+
+format = <ramp> <label>
+format-background = ${color.mb}
+format-foreground = ${color.blue-arch}
+
+label = %percentage%%
+; label-font = 4
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+ramp-6 = 
+ramp-7 = 
+ramp-8 = 
+ramp-9 = 
+ramp-font = 7
+ramp-foreground = ${color.MAGENTA}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/title]
+type = internal/xwindow
+
+; Available tags:
+;   <label> (default)
+;format = " <label>"
+format-prefix = " ~ "
+format-prefix-font = 2
+format-prefix-foreground = ${color.blue-gray}
+format-background = ${color.BG}
+format-foreground = ${color.fg}
+; Available tokens:
+;   %title%
+; Default: %title%
+label = %title%
+label-maxlen = 40
+label-title-foreground = ${color.black}
+; Used instead of label when there is no window title
+; Available tokens:
+;   None
+label-empty = Desktop
+label-empty-foreground = #3F9DAD
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/workspaces]
+type = internal/xworkspaces
+enable-click = true
+format-background = ${color.mb}
+; formatting
+format = <label-state>
+format-font = 2
+label-active = "  "
+label-active-foreground = #E3DF7A
+label-occupied = "  "
+label-occupied-foreground = #0A9CF5
+label-urgent = "  "
+label-urgent-foreground = #5F74D6
+label-empty = "  "
+label-empty-foreground = #FFFFFF
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/mod]
+type = internal/bspwm
+
+format = <label-mode>
+format-background = ${color.BGL}
+format-foreground = #AD8EE6
+format-padding = 1
+format-font = 4
+
+label-monocle = "Monocle"
+label-tiled = "Tiled"
+
+label-floating = " | Float"
+label-pseudotiled = " | Pseudo"
+label-fullscreen = " | Full"
+
+label-locked = " | Locked"
+label-sticky = " | Sticky"
+label-private = " | Private"
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/date]
+type = internal/date
+
+interval = 1.0
+
+time = %I:%M %p
+time-alt = %A, %d %B %Y
+
+format = <label>
+format-prefix = ""
+; format-prefix = "祥"
+format-prefix-font = 3
+format-prefix-foreground = ${color.blue}
+format-prefix-background = ${color.mb}
+
+label = " %time%"
+label-font = 4
+label-foreground = ${color.fg}
+label-background = ${color.mb}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+; If you use both a wired and a wireless network, add both modules in config.
+[module/ethernet]
+type = internal/network
+interface = ${system.network_interface}
+
+interval = 1.0
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <label-connected>
+format-connected-prefix = " "
+format-connected-prefix-font = 3
+format-connected-prefix-foreground =  ${color.green}
+format-connected-prefix-background = ${color.mb}
+
+format-disconnected = <label-disconnected>
+format-disconnected-prefix = " "
+format-disconnected-prefix-font = 3
+format-disconnected-prefix-foreground = ${color.green}
+format-disconnected-prefix-background = ${color.mb}
+
+; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed%%{A}"
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed%%{A}"
+label-connected-background = ${color.mb}
+label-connected-foreground = ${color.green}
+
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}Offline%{A}"
+label-disconnected-background = ${color.mb}
+label-disconnected-foreground = ${color.green}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/network]
+type = custom/script
+exec = ~/.config/polybar/scripts/network.sh icon
+format = "<label>"
+format-background = ${color.mb}
+format-foreground = #86AAEA
+format-font = 2
+interval = 1
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+label-layout = %layout%
+label-layout-foreground = ${colors.primary}
+label-layout-font = 4
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-foreground = ${colors.background}
+label-indicator-background = ${colors.secondary}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/sysmenu]
+type = custom/text
+
+content = ""
+content-font = 7
+content-foreground = ${color.RED}
+;content-background = ${color.BGL}
+content-padding = 0
+
+click-left = ~/.config/rofi/bin/powermenu
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/notification-github]
+type = custom/script
+exec = ~/.config/polybar/scripts/notification-github.sh
+interval = 60
+label-background = ${color.BGL}
+click-left = google-chrome-stable --newtab https://github.com/notifications
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/menu]
+type = custom/text
+
+; content = ""
+; content = ""
+content = ""
+content-font = 3
+
+;content-font = 3
+content-foreground = ${color.blue-arch}
+content-padding = 0
+
+click-left = ~/.config/rofi/bin/launcher
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/xdomenu]
+type = custom/text
+interval = 1
+content = ""
+content-font = 3
+content-foreground = ${color.blue-arch}
+content-padding = 0
+click-left = jgmenu_run
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ 
+
+[module/powermenu]
+type = custom/text
+
+; content = ""
+content = ""
+content-font = 3
+content-foreground = ${color.green}
+content-padding = 0
+
+click-left = /bin/xfce4-session-logout
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

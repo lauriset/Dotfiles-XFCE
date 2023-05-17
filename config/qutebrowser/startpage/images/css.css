@@ -1,0 +1,22 @@
+@charset "utf-8";
+body {
+	text-align: center;
+	margin-top: 100px;
+}
+#wrapper {
+	text-align: left;
+	height: auto;
+	width: 873px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+
+links {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	color: #011826;
+	text-decoration: none;
+}
